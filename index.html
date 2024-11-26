@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Defina a largura da barra lateral para 120px */
-    .w3-sidebar {width: 120px;background: #222;}
-    /* Adicione uma margem esquerda ao “conteúdo da página” que corresponda à largura da barra lateral (120px) */
-    #main {margin-left: 120px}
-    /* Remova as margens do “conteúdo da página” em telas pequenas */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+      body, h1,h2,h3,h4,h5,h6 {
+        font-family: "Montserrat", sans-serif;
+        background-color: #9144f7;
+      }
+      .w3-row-padding img {margin-bottom: 12px}
+      .w3-sidebar {width: 120px; background: #b5e248;}
+      #main {margin-left: 120px}
+      @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+      
+      /* Altere a cor da classe w3-black */
+      .w3-black {
+        background-color: #9144f7 !important;
+        color: white;
+      }
     </style>
   </head>
-<body class="w3-black">
+<body>
 
 <!-- Barra de ícones (barra lateral - oculta em telas pequenas) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -45,24 +51,24 @@
 <!-- Barra de navegação em telas pequenas (oculta em telas médias e grandes) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INÍCIO</a>
+    <a href="#sobre" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+    <a href="#fotos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
+    <a href="#contatos" class="w3-bar-item w3-button" style="width:25% !important">CONTATOS</a>
   </div>
 </div>
 
 <!-- Conteúdo da página -->
 <div class="w3-padding-large" id="main">
   <!-- Cabeçalho/Início -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="início">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Kessyanne Gama </h1>
     <p>Designer</p>
     <img src="https://www.designerd.com.br/wp-content/uploads/2024/02/portfolio-design-grafico.png" alt="apresentação" class="w3-image" width="992" height="1108">
   </header>
 
   <!-- Sobre a seção -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="sobre">
     <h2 class="w3-text-light-grey">Um pouco sobre mim</h2>
     <hr style="width:200px" class="w3-opacity">
     <p> Olá, me chamo Kessy! Com uma formação acadêmica em Design Gráfico e de Produto em desenvolvimento e uma forte paixão pela criação visual. Com uma trajetória marcada pelo contato com arte, cultura e inovação, encontrei no design o espaço ideal para explorar soluções que combinam criatividade e funcionalidade.
@@ -115,7 +121,7 @@ Comprometida com o aprendizado constante e o crescimento profissional, vejo o de
   </div>
   
   <!-- Seção de portfólio -->
-  <div class="w3-padding-64 w3-content" id="photos">
+  <div class="w3-padding-64 w3-content" id="fotos">
     <h2 class="w3-text-light-grey">Meus Trabalhos</h2>
     <hr style="width:200px" class="w3-opacity">
 
@@ -139,7 +145,7 @@ Comprometida com o aprendizado constante e o crescimento profissional, vejo o de
   </div>
 
   <!-- Seção de contato -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contatos">
     <h2 class="w3-text-light-grey">Meus Contatos</h2>
     <hr style="width:200px" class="w3-opacity">
 
