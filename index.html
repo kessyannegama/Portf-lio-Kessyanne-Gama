@@ -17,35 +17,34 @@
       #main {margin-left: 120px}
       @media only screen and (max-width: 600px) {#main {margin-left: 0}}
       
-      /* Estilo para a barra lateral */
-      .w3-sidebar .w3-bar-item {
-        background-color: #fdf0ae; /* Cor de fundo bege */
-        color: #472403; /* Cor marrom para o ícone */
-      }
-
-      /* Cor de fundo dos ícones no hover */
-      .w3-sidebar .w3-bar-item:hover {
-        background-color: #472403; /* Cor marrom no hover */
-        color: white; /* Cor do ícone em branco no hover */
-      }
-
-      /* Estilo para o ícone ativo */
-      .w3-sidebar .w3-bar-item.w3-active {
-        background-color: #fdf0ae !important; /* Cor de fundo bege no ícone ativo */
-        color: #472403 !important; /* Cor marrom no ícone ativo */
-      }
-
-      /* Altera a cor da classe w3-black */
+      /* Altere a cor da classe w3-black */
       .w3-black {
         background-color: #fdf0ae !important;
         color: white;
       }
-
-      /* Para os ícones */
+      
+      /* Altera a cor dos ícones da barra lateral */
       .w3-sidebar .fa {
-        color: #472403 !important; /* Cor inicial dos ícones */
+        color: #472403 !important;
       }
 
+      /* Cor de fundo dos ícones no estado normal */
+      .w3-bar-item {
+        background-color: #fdf0ae; /* Cor bege */
+        color: #472403; /* Cor do ícone marrom */
+      }
+
+      /* Cor de fundo dos ícones quando passar o mouse */
+      .w3-bar-item:hover {
+        background-color: #472403 !important; /* Cor marrom no hover */
+        color: white; /* Cor dos ícones muda para branco no hover */
+      }
+
+      /* Cor de fundo dos ícones quando a página estiver ativa */
+      .w3-bar-item.w3-active {
+        background-color: #472403 !important; /* Marrom no fundo */
+        color: white !important; /* Cor do ícone branca */
+      }
     </style>
   </head>
   <body>
@@ -141,45 +140,57 @@
       </div>
 
       <!-- Seção de portfólio -->
-      <div class="w3-padding-64 w3-content" id="fotos">
-        <h2 class="w3-text-light-grey">Meus Trabalhos</h2>
-        <hr style="width:200px" class="w3-opacity">
+<div class="w3-padding-64 w3-content" id="fotos">
+  <h2 class="w3-text-light-grey">Meus Trabalhos</h2>
+  <hr style="width:200px" class="w3-opacity">
 
-        <!-- Galeria de fotos -->
-        <div class="w3-row-padding w3-center w3-padding-16">
-          <div class="w3-quarter">
-            <img src="https://i.imgur.com/KQI1yHq.png" alt="Trabalho 1" style="width:100%" class="w3-hover-opacity">
-          </div>
-          <div class="w3-quarter">
-            <img src="https://i.imgur.com/od2owgO.png" alt="Trabalho 2" style="width:100%" class="w3-hover-opacity">
-          </div>
-          <div class="w3-quarter">
-            <img src="https://i.imgur.com/KQI1yHq.png" alt="Trabalho 3" style="width:100%" class="w3-hover-opacity">
-          </div>
-          <div class="w3-quarter">
-            <img src="https://i.imgur.com/od2owgO.png" alt="Trabalho 4" style="width:100%" class="w3-hover-opacity">
-          </div>
-        </div>
-      </div>
+  <!-- Grade para fotos -->
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <!-- Coluna da esquerda -->
+    <div class="w3-half">
+      <img src="https://i.imgur.com/BYnQPmo.jpeg" style="width:100%">
+      <img src="https://i.imgur.com/587EoFu.jpeg" style="width:100%">
+      <img src="https://i.imgur.com/ImyfSPd.jpeg" style="width:100%">
+    </div>
 
-      <!-- Contato -->
+    <!-- Coluna da direita -->
+    <div class="w3-half">
+      <img src="XXXX" style="width:100%">
+      <img src="XXXX" style="width:100%">
+      <img src="XXXX" style="width:100%">
+    </div>
+  </div>
+</div>
+
+
+      <!-- Seção de contato -->
       <div class="w3-padding-64 w3-content" id="contatos">
-        <h2 class="w3-text-light-grey">Entre em Contato</h2>
+        <h2 class="w3-text-light-grey">Contate-me</h2>
         <hr style="width:200px" class="w3-opacity">
-        <form action="https://formspree.io/f/xeqjorkr" method="POST">
-          <input class="w3-input w3-border w3-large" type="text" placeholder="Nome" required name="name"><br><br>
-          <input class="w3-input w3-border w3-large" type="email" placeholder="Email" required name="_replyto"><br><br>
-          <textarea class="w3-input w3-border w3-large" placeholder="Mensagem" required name="message"></textarea><br><br>
-          <button type="submit" class="w3-button w3-large w3-black w3-hover-opacity">Enviar</button>
+        <form action="#" target="_blank">
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Name"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Telefone" required name="Telefone"></p>
+          <button class="w3-button w3-black w3-padding-large" type="submit">ENVIAR MENSAGEM</button>
         </form>
       </div>
-
-      <!-- Rodapé -->
-      <footer class="w3-center w3-padding-32 w3-light-grey">
-        <p>Feito com ♥ por Kessyanne Gama</p>
-      </footer>
-
     </div>
+
+    <!-- Script para mudar a cor dos ícones -->
+    <script>
+      // Quando qualquer ícone da barra lateral for clicado
+      document.querySelectorAll('.w3-bar-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          // Remove a classe 'w3-active' de todos os ícones
+          document.querySelectorAll('.w3-bar-item').forEach(function(i) {
+            i.classList.remove('w3-active');
+          });
+          
+          // Adiciona a classe 'w3-active' ao ícone clicado
+          this.classList.add('w3-active');
+        });
+      });
+    </script>
 
   </body>
 </html>
