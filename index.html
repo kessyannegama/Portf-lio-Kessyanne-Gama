@@ -17,198 +17,169 @@
       #main {margin-left: 120px}
       @media only screen and (max-width: 600px) {#main {margin-left: 0}}
       
-      /* Altere a cor da classe w3-black */
+      /* Estilo para a barra lateral */
+      .w3-sidebar .w3-bar-item {
+        background-color: #fdf0ae; /* Cor de fundo bege */
+        color: #472403; /* Cor marrom para o ícone */
+      }
+
+      /* Cor de fundo dos ícones no hover */
+      .w3-sidebar .w3-bar-item:hover {
+        background-color: #472403; /* Cor marrom no hover */
+        color: white; /* Cor do ícone em branco no hover */
+      }
+
+      /* Estilo para o ícone ativo */
+      .w3-sidebar .w3-bar-item.w3-active {
+        background-color: #fdf0ae !important; /* Cor de fundo bege no ícone ativo */
+        color: #472403 !important; /* Cor marrom no ícone ativo */
+      }
+
+      /* Altera a cor da classe w3-black */
       .w3-black {
         background-color: #fdf0ae !important;
         color: white;
       }
-      
-      /* Altera a cor dos ícones da barra lateral */
-.w3-sidebar .fa {
-  color: #472403 !important;
-}
 
-
-/* Cor de fundo dos ícones no estado normal */
-.w3-bar-item {
-  background-color: #fdf0ae; /* Cor bege */
-  color: #472403; /* Cor do ícone marrom */
-}
-
-/* Cor de fundo dos ícones quando passar o mouse */
-.w3-bar-item:hover {
-  background-color: #472403 !important; /* Cor marrom no hover */
-  color: white; /* Cor dos ícones muda para branco no hover */
-}
-
-/* Cor de fundo dos ícones quando a página estiver ativa */
-.w3-bar-item.w3-black {
-  background-color: #fdf0ae !important; /* Fica bege quando ativo */
-  color: #472403; /* Cor do ícone marrom quando ativo */
-}
+      /* Para os ícones */
+      .w3-sidebar .fa {
+        color: #472403 !important; /* Cor inicial dos ícones */
+      }
 
     </style>
   </head>
-<body>
+  <body>
 
+    <!-- Barra de ícones (barra lateral - oculta em telas pequenas) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Imagem do avatar no canto superior esquerdo -->
+      <img src="https://img.freepik.com/vetores-premium/cara-de-preguica-de-desenho-plano-de-contorno-preto-vetorial_505913-3607.jpg" style="width:100%">
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>INÍCIO</p>
+      </a>
+      <a href="#sobre" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>SOBRE</p>
+      </a>
+      <a href="#fotos" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-camera w3-xxlarge"></i>
+        <p>FOTOS</p>
+      </a>
+      <a href="#contatos" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTATOS</p>
+      </a>
+    </nav>
 
-
-<!-- Barra de ícones (barra lateral - oculta em telas pequenas) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Imagem do avatar no canto superior esquerdo -->
-  <img src="https://img.freepik.com/vetores-premium/cara-de-preguica-de-desenho-plano-de-contorno-preto-vetorial_505913-3607.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>INÍCIO</p>
-  </a>
-  <a href="#sobre" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>SOBRE</p>
-  </a>
-  <a href="#fotos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-camera w3-xxlarge"></i>
-    <p>FOTOS</p>
-  </a>
-  <a href="#contatos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTATOS</p>
-  </a>
-</nav>
-
-<!-- Barra de navegação em telas pequenas (oculta em telas médias e grandes) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INÍCIO</a>
-    <a href="#sobre" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
-    <a href="#fotos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
-    <a href="#contatos" class="w3-bar-item w3-button" style="width:25% !important">CONTATOS</a>
-  </div>
-</div>
-
-<!-- Conteúdo da página -->
-<div class="w3-padding-large" id="main">
-  <!-- Cabeçalho/Início -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="início">
-    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Kessyanne Gama </h1>
-    <p>Designer</p>
-    <img src="https://i.imgur.com/f71nsVf.png" alt="apresentação" class="w3-image" width="992" height="1108">
-  </header>
-
-  <!-- Sobre a seção -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="sobre">
-    <h2 class="w3-text-light-grey">Um pouco sobre mim</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> Olá, me chamo Kessy! Com uma formação acadêmica em Design Gráfico e de Produto em desenvolvimento e uma forte paixão pela criação visual. Com uma trajetória marcada pelo contato com arte, cultura e inovação, encontrei no design o espaço ideal para explorar soluções que combinam criatividade e funcionalidade.
-
-Comprometida com o aprendizado constante e o crescimento profissional, vejo o design como uma plataforma para gerar impacto positivo, com soluções visuais que vão além do estético e conectam pessoas e marcas de forma autêntica e estratégica.
-    </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">Minhas Habilidades</h3>
-    <p class="w3-wide">Design de Embalagens</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">Design Gráfico</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide">Pacote Adobe</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br>
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">5+</span><br>
-        Parcerias
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">30+</span><br>
-        Projetos entregues
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">50+</span><br>
-        Clientes Satisfeitos
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">1850+</span><br>
-        Seguidores
+    <!-- Barra de navegação em telas pequenas (oculta em telas médias e grandes) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INÍCIO</a>
+        <a href="#sobre" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+        <a href="#fotos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
+        <a href="#contatos" class="w3-bar-item w3-button" style="width:25% !important">CONTATOS</a>
       </div>
     </div>
-    
-    <!-- Depoimentos -->
-    <h3 class="w3-padding-24 w3-text-light-grey">Clientes</h3>  
-    <img src="https://i.imgur.com/sveeivL.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Grazi Castellano.</span> CEO em Biscoituxos.</p>
-    <p>"Kessy, ficou tudo muito lindoooo! É muita delicadeza!"</p><br>
-    
-    <img src="https://i.imgur.com/st1oYFj.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Camila Spadotto.</span> CEO Bite Me Petiscaria.</p>
-    <p>"Gostaria de dizer que amei seu trabalho! Um capricho, um carinho e um cuidado sem igual!"</p>
-  <!-- Fim da seção sobre -->
-  </div>
-  
-  <!-- Seção de portfólio -->
-  <div class="w3-padding-64 w3-content" id="fotos">
-    <h2 class="w3-text-light-grey">Meus Trabalhos</h2>
-    <hr style="width:200px" class="w3-opacity">
 
-    <!-- Grade para fotos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/sailboat.jpg" style="width:100%">
+    <!-- Conteúdo da página -->
+    <div class="w3-padding-large" id="main">
+      <!-- Cabeçalho/Início -->
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="início">
+        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Kessyanne Gama </h1>
+        <p>Designer</p>
+        <img src="https://i.imgur.com/f71nsVf.png" alt="apresentação" class="w3-image" width="992" height="1108">
+      </header>
+
+      <!-- Sobre a seção -->
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="sobre">
+        <h2 class="w3-text-light-grey">Um pouco sobre mim</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p> Olá, me chamo Kessy! Com uma formação acadêmica em Design Gráfico e de Produto em desenvolvimento e uma forte paixão pela criação visual. Com uma trajetória marcada pelo contato com arte, cultura e inovação, encontrei no design o espaço ideal para explorar soluções que combinam criatividade e funcionalidade.</p>
+        <h3 class="w3-padding-16 w3-text-light-grey">Minhas Habilidades</h3>
+        <p class="w3-wide">Design de Embalagens</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+        </div>
+        <p class="w3-wide">Design Gráfico</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+        </div>
+        <p class="w3-wide">Pacote Adobe</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+        </div><br>
+
+        <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">5+</span><br>
+            Parcerias
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">30+</span><br>
+            Projetos entregues
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">50+</span><br>
+            Clientes Satisfeitos
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">1850+</span><br>
+            Seguidores
+          </div>
+        </div>
+
+        <!-- Depoimentos -->
+        <h3 class="w3-padding-24 w3-text-light-grey">Clientes</h3>  
+        <img src="https://i.imgur.com/sveeivL.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <p><span class="w3-large w3-margin-right">Grazi Castellano.</span> CEO em Biscoituxos.</p>
+        <p>"Kessy, ficou tudo muito lindoooo! É muita delicadeza!"</p><br>
+
+        <img src="https://i.imgur.com/st1oYFj.jpeg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <p><span class="w3-large w3-margin-right">Camila Spadotto.</span> CEO Bite Me Petiscaria.</p>
+        <p>"Gostaria de dizer que amei seu trabalho! Um capricho, um carinho e um cuidado sem igual!"</p>
       </div>
 
-      <div class="w3-half">
-        <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/chef.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%">
+      <!-- Seção de portfólio -->
+      <div class="w3-padding-64 w3-content" id="fotos">
+        <h2 class="w3-text-light-grey">Meus Trabalhos</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <!-- Galeria de fotos -->
+        <div class="w3-row-padding w3-center w3-padding-16">
+          <div class="w3-quarter">
+            <img src="https://i.imgur.com/KQI1yHq.png" alt="Trabalho 1" style="width:100%" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="https://i.imgur.com/od2owgO.png" alt="Trabalho 2" style="width:100%" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="https://i.imgur.com/KQI1yHq.png" alt="Trabalho 3" style="width:100%" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="https://i.imgur.com/od2owgO.png" alt="Trabalho 4" style="width:100%" class="w3-hover-opacity">
+          </div>
+        </div>
       </div>
-    <!-- Fim da grade de fotos -->
+
+      <!-- Contato -->
+      <div class="w3-padding-64 w3-content" id="contatos">
+        <h2 class="w3-text-light-grey">Entre em Contato</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <form action="https://formspree.io/f/xeqjorkr" method="POST">
+          <input class="w3-input w3-border w3-large" type="text" placeholder="Nome" required name="name"><br><br>
+          <input class="w3-input w3-border w3-large" type="email" placeholder="Email" required name="_replyto"><br><br>
+          <textarea class="w3-input w3-border w3-large" placeholder="Mensagem" required name="message"></textarea><br><br>
+          <button type="submit" class="w3-button w3-large w3-black w3-hover-opacity">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="w3-center w3-padding-32 w3-light-grey">
+        <p>Feito com ♥ por Kessyanne Gama</p>
+      </footer>
+
     </div>
-  <!-- Seção final do portfólio -->
-  </div>
 
-  <!-- Seção de contato -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contatos">
-    <h2 class="w3-text-light-grey">Meus Contatos</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> São Paulo, SP</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Telefone: (11) 93932-8197</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> E-mail: kessyanne.gama@gmail.com</p>
-    </div><br>
-    <p>Vamos conversar? Me envie uma mensagem:</p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Nome"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="E-mail" required name="E-mail"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Assunto"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required name="Mensagem"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
-        </button>
-      </p>
-    </form>
-  <!-- Seção de contato final-->
-  </div>
-  
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
- <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Seguir agora</a> 
- <!-- Rodapé final -->
-</footer>
-
-<!-- CONTEÚDO DA PÁGINA FINAL -->
-</div>
-
-</body>
+  </body>
 </html>
